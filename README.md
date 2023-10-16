@@ -1,6 +1,6 @@
 # Predicting Diabetes Risk: Phase3_Project
 
-![diabetes_image]()
+![diabetes_cover](https://github.com/ldwilker10/phase3_final_project/blob/main/phase3_rough_draft/visuals/diabetes_cover.png)
 
 
 #### Project by: Lucas Wilkerson
@@ -8,17 +8,17 @@
 
 ## Project Overview
 
-For this project I sought to develop predictive models to identify individuals who are at higher risk of developing diabetes based on an array of health-related characteristics. Using this data and predictive models, health-care practicioners can improve patient outcomes by improving early diagnosis/ detection and preemptively implementing personalized treatment strategies for treatment and prevention of diabetes. 
+For this project I sought to develop a predictive model to identify individuals who are at higher risk of developing diabetes or have diabetes based on an array of health-related characteristics. Using this data and predictive models, health-care practitioners can improve patient outcomes by improving early diagnosis/ detection and preemptively implementing personalized treatment strategies for treatment and prevention of diabetes. 
 
 ## Business Problem/Stakeholder
 
-A healthcare practice group is looking to improve diabetes diagnosis, improve prognosis of those who are diagnosed and aid assist patients looking to prevent diabetes. Utilizing this data, providers will be able to look for early detection signs of diabetes and then implement corrective strategies early on in the diesease process to either improve the patients outcome and health with the disease or prevent it altogether. Utilizing my model, the goal is to assist practicioners with early detection by identifying which health-related attributes such as blood pressure, glucose levels, insulin levels, BMI, and age (other afctors: pregnancies, skinfold thickness, diabetes pedigree function) are more predictive or increase the risk of diabetes. 
+A healthcare practice group is looking to improve diabetes diagnosis, improve prognosis of those who are diagnosed and assist patients looking to prevent diabetes. Utilizing this data, providers will be able to look for early detection signs of diabetes and then implement corrective strategies early on in the diesease process to either improve the patients outcome and health with the disease or prevent it altogether. Utilizing my model, the goal is to assist practitioners with early detection by building a predictive model that can identify individuals who have diabetes based health-related attributes such as blood pressure, glucose levels, insulin levels, BMI, age and other factors. 
 
 
 ## Data Undertsanding 
 
 For my analysis, I utilized the below dataset that is provided on the website Kaggle. 
-- diabetes.csv
+- diabetes.csv [https://www.kaggle.com/datasets/pkdarabi/diabetes-dataset-with-18-features/data] 
 
 After cleaning and preparation, the final dataset contained 3260 rows with 18 columns containing numerical data types. The target variable is the presence of diabetes which is indicated by the "Diabetes" column. The independent, or feature, variables contain various health and lifestyle indicators ranging from numerical columns containing lab values of various health markers to categorical columns, such as smoking, drinking, and gender. Below is a list of the columns of the dataset. 
 
@@ -41,65 +41,81 @@ Columns of dataset:
 - Drinking Status
 - Family History
 - Diabetes: presence of Diabetes
-       
+
+With the cleaned dataset, there are 3260 rows and in the context of the target variable count, 3000 are labeled as not having diabetes and 260 being labeled as having diabetes. 
+
+
+![diabetes_count](https://github.com/ldwilker10/phase3_final_project/blob/main/phase3_rough_draft/visuals/diabetes_count.png)
 
 
 ## Modeling 
 
 Baseline Model: The initial baseline model was a simple logistic regression model with no hyperparameters tuned. SMOTE was applied to initial training data to account for the class imbalance in the dataset. 
 
-- Train Score: 0.9004886717014661
+- Train Score: 0.8984895601954687
 - Test Score: 0.9030674846625767
-- Cross Validation Scores: [0.88679245 0.92230855 0.89555556 0.88555556 0.90111111]
+- Cross Validation Scores: 0.86792453, 0.90344062, 0.89777778, 0.89777778, 0.90555556
 - Accuracy Score: 0.9030674846625767
-- Precision Score: 0.448
-- F1 Score: 0.5863874345549738
-- Recall Score: 0.8484848484848485
+- Precision Score: 0.44715447154471544
+- F1 Score: 0.5820105820105821
+- Recall Score: 0.8333333333333334
+
 
 Random Forest Classifier Model: A simple random forest classifier model with no hyperparameters tuned was also utilized.
 
 - Train Score: 1.0
-- Test Score: 0.9325153374233128
-- Cross Validation Scores: [0.95449501 0.97225305 0.95888889 0.95888889 0.95444444]
-- Accuracy Score: 0.9325153374233128
-- Precision Score: 0.5714285714285714
-- F1 Score: 0.6153846153846153
-- Recall Score: 0.6666666666666666
+- Test Score: 0.9239263803680982
+- Cross Validation Scores: 0.94339623, 0.96337403, 0.95888889, 0.96222222, 0.96555556
+- Accuracy Score: 0.9239263803680982
+- Precision Score: 0.5256410256410257
+- F1 Score: 0.5694444444444445
+- Recall Score: 0.6212121212121212
 
 
 Other models that were tested included a simple Decision Tree Classifier Model and a simple K-Nearest Neighbors Model. These were not pursued after initial simple models due underperforming when compared to the Baseline Model and the Random Forest Classifier Model. 
-Change images
-![name_of_image](link to image)
-
-Change images
-![name_of_image](link to image)
 
 
-## Regression Results 
+## Best Model Results 
 
-After tuning both the baseline model and random forest classifier model, and comparing all four models (baseline logistic, tuned logistic, rfc, tuned rfc), the initial baseline logistic regression model had the best performance by our specific metric of focus (F1 and Recall scores).
+After tuning both the baseline model and random forest classifier model, and comparing all four models (baseline logistic, tuned logistic, rfc, tuned rfc), the tuned baseline logistic regression model had the best performance based our specific metrics of focus (F1 and Recall scores).
 
-With the baseline model the scores were: 
+With the tuned baseline model, the scores were: 
 
-- Train Score: 0.9004886717014661
-- Test Score: 0.9030674846625767
-- Accuracy (same as test) Score: 0.9030674846625767
-- Precision Score: 0.448
-- F1 Score: 0.5863874345549738
-- Recall Score: 0.8484848484848485
+- Train Score: 0.8978231896934695
+- Test Score: 0.9042944785276074
+- Cross Validation Scores: 0.86792453, 0.90566038, 0.90222222, 0.90111111, 0.90333333
+- Accuracy (same as test) Score: 0.9042944785276074
+- Precision Score: 0.45081967213114754
+- F1 Score: 0.5851063829787234
+- Recall Score: 0.8333333333333334
 
-Train and test scores were very close in value indicating that there was not any signs of underfitting or overfitting with the model. While the test/accuracy score was not the best of all models, it's score of 0.903 is still adequate. Having a score of 0.903 indicates that out of all the predictions the model made, 90.3 % were correct. This includes true positives (individuals with diabetes) and true negatives(individuals without diabetes). 
 
-Recall: The model's overall recall score was 0.848 which means that out of all of the individuals/patients that actually had diabetes, the model correctly identified 84.8 % of those. 
+Train and test scores were very close in value indicating that there was not any signs of underfitting or overfitting with the model. While the test/accuracy score was not the best of all models, it's score of 0.904 is still adequate. Having a score of 0.904 indicates that out of all the predictions the model made, 90.3 % were correct. This includes true positives (individuals with diabetes) and true negatives(individuals without diabetes). 
 
-Precision: The model's overall precision score was 0.448 which indicates that out of all the times that the model stated that an individual had diabetes (predicted positives), 44.8 % of those actually had diabetes (true positives)
+Recall: The model's overall recall score was 0.833 which means that out of all of the individuals/patients that actually had diabetes, the model correctly identified 83.3 % of those. 
 
-F1 Score: The model's overall score was 0.586 which takes into account both of precision and recall. Generally if this value is higher, this indicated the model is doing well all around. Having a value of 0.586 is lower than desired. Given that the model is skewed mored towards recall and less towards precision, the F1 score penalizes the model in this case. 
+Precision: The model's overall precision score was 0.451 which indicates that out of all the times that the model stated that an individual had diabetes (predicted positives), 45.1 % of those actually had diabetes (true positives)
+
+F1 Score: The model's overall score was 0.585 which takes into account both of precision and recall. Generally if this value is higher, this indicated the model is doing well all around. Having a value of 0.585 is lower than desired. Given that the model is skewed mored towards recall and less towards precision, the F1 score penalizes the model in this case. 
+
+### Feature Importance for Best Model
+
+![feature_importances_tuned_baseline](https://github.com/ldwilker10/phase3_final_project/blob/main/phase3_rough_draft/visuals/feature_importances_tuned_baseline.png)
+
+Most Important Features:
+
+- FFPG (Final Fasting Plasma Glucose)
+- Age
+- FPG (Fasting Plasma Glucose)
+
+When looking into the features, the most important features for this model are FFPG, Age and FPG with the most important feature being FFPG (Final Fasting Plasma Glucose). With these being the biggest predictors for the model (for identifying diabetes), these health metrics should be consistent monitored and considered by health care practitioners when reviewing health care plans.
+
+![histogram_ffpg_dm_count](https://github.com/ldwilker10/phase3_final_project/blob/main/phase3_rough_draft/visuals/histogram_ffpg_dm_count.png)
 
 
 ## Conclusion/ Recommendations 
 
-The baseline logistic regression model showed great performance in identifying those with diabetes based on the various features and health/lifestyles metrics. The model showed that out of all individuals with diabetes, it could correctly identify 84.8 % of those individuals. This can provide great benefit for healthcare practitioner's by increasing early detection and allowing for early treatment. By treating the disease early on, this can improve overall prognosis, improve patient outcomes by preventing accerleration of disease and negative health consequences while also decreasing the load on the healthcare system and the providers. 
+The tuned baseline logistic regression model showed great performance in identifying those with diabetes based on the various features and health/lifestyles metrics. The model showed that out of all individuals with diabetes, it could correctly identify 83.3 % of those individuals. This can provide great benefit for healthcare practitioner's by increasing early detection and allowing for early treatment. By treating the disease early on, this can improve overall prognosis, improve patient outcomes by preventing accerleration of disease and negative health consequences while also decreasing the load on the healthcare system and the providers. 
 
 Recommendations: 
 
