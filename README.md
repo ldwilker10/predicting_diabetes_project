@@ -12,7 +12,7 @@ For this project I sought to develop a predictive model to identify individuals 
 
 ## Business Problem/Stakeholder
 
-A healthcare practice group is looking to improve diabetes diagnosis, improve prognosis of those who are diagnosed and assist patients looking to prevent diabetes. Utilizing this data, providers will be able to look for early detection signs of diabetes and then implement corrective strategies early on in the diesease process to either improve the patients outcome and health with the disease or prevent it altogether. Utilizing my model, the goal is to assist practitioners with early detection by building a predictive model that can identify individuals who have diabetes based health-related attributes such as blood pressure, glucose levels, insulin levels, BMI, age and other factors. 
+A healthcare practice group is looking to improve early diabetes identification so that they can improve patient outcomes and  prognosis of those who are diagnosed with diabetes while assisting patients in preventing onset of diabetes. Utilizing this data and model, providers will be able increase early detection of diabetes/ risk of diabetes and then implement corrective strategies early on in the disease process to either improve the patients outcome with the disease or prevent the acceleration of the disease. Utilizing the model, the goal is to assist practitioners with early identification by building a predictive model that can identify individuals who have diabetes based health-related attributes such as blood pressure, glucose levels, insulin levels, BMI, age and other factors. 
 
 
 ## Data Understanding 
@@ -72,7 +72,7 @@ Random Forest Classifier Model: A simple random forest classifier model with no 
 - Recall Score: 0.6212121212121212
 
 
-Other models that were tested included a simple Decision Tree Classifier Model and a simple K-Nearest Neighbors Model. These were not pursued after initial simple models due underperforming when compared to the Baseline Model and the Random Forest Classifier Model. 
+Two other models that were tested included a simple Decision Tree Classifier Model and a simple K-Nearest Neighbors Model. These were not pursued after initial simple models due underperforming when compared to the Baseline Model and the Random Forest Classifier Model. 
 
 
 ## Best Model Results 
@@ -115,22 +115,22 @@ When looking into the features, the most important features for this model are F
 
 ## Conclusion/ Recommendations 
 
-The tuned baseline logistic regression model showed great performance in identifying those with diabetes based on the various features and health/lifestyles metrics. The model showed that out of all individuals with diabetes, it could correctly identify 83.3 % of those individuals. This can provide great benefit for healthcare practitioner's by increasing early detection and allowing for early treatment. By treating the disease early on, this can improve overall prognosis, improve patient outcomes by preventing accerleration of disease and negative health consequences while also decreasing the load on the healthcare system and the providers. 
+The tuned baseline logistic regression model showed great performance in identifying those with diabetes based on the various features and health/lifestyles metrics. The model showed that out of all individuals with diabetes, it could correctly identify 83.3 % of those individuals. This can provide great benefit for healthcare practitioner's by increasing early detection and allowing for early treatment. By treating the disease early on, this can improve overall prognosis, improve patient outcomes by preventing acceleration of disease and negative health consequences while also decreasing the load on the healthcare system and the providers. 
 
 Recommendations: 
 
-- Healthcare providers should utilize this model as a tool for early diabetes detection/screen. While this model is not an official diagnostic tool for diabetes, this model can be useful for early detecton and screening. If an individual is flagged by the model, additional diagnostic testing can then be utilized to confirm disease status.
+- Healthcare providers should utilize this model as a tool for early diabetes detection/screen. While this model is not an official diagnostic tool for diabetes, this model is useful for early detecton and screening. 
 
-- Using this model, practitioner's can implement preventative health strategies to their patient population early on before disease progression. Such strategies or approaches could include dietary education or exercise recommendations. 
+- Using this model, practitioner's can implement preventative health strategies to their patient population early on before disease progression. 
 
-- In the context of identifying diabetes status and risk, healthcare practitioner's should focus on a patients FFPG, Age and FPG. 
+- In the context of identifying diabetes status and risk, healthcare practitioner's should focus on monitoring patient's FFPG, Age and FPG. 
 
 
 
 ## Limitations
 While the model can be useful to predicting individuals with diabetes based on various health and lifestyles factors, the model is not perfect and does have it's limitations.
 
-- False positives: When individuals actually have diabetes, the model correctly identifies those indiviudals approximiately 84.8% of the time. With having a higher recall, there is an increased risk of mislabeling indiviudals without diabetes as having diabetes. While there is this increased chance, having an increased risk if in correclty identifying someone as having diabetes is a better trade off in this situation that incorrectly labeling someone as not having diabetes when they in fact do have diabetes. If someone is labeled as a false positive, recommending increased care or lifestyle interventions to address diabetes may be more of an annoyance or inconvenience to a healthy patient, however this outcome would be better than if a patient with diabetes is not identified and is left untreated allowing the disease to progress and health to deteriorate.
+- False positives: When individuals actually have diabetes, the model correctly identifies those indiviudals approximiately 83.3% of the time. With having a higher recall, there is an increased risk of mislabeling indiviudals without diabetes as having diabetes. While there is this increased chance, having an increased risk if in correclty identifying someone as having diabetes is a better trade off in this situation that incorrectly labeling someone as not having diabetes when they in fact do have diabetes. If someone is labeled as a false positive, recommending increased care or lifestyle interventions to address diabetes may be more of an annoyance or inconvenience to a healthy patient, however this outcome would be better than if a patient with diabetes is not identified and is left untreated allowing the disease to progress and health to deteriorate.
 
 - Low sample size (specifically individuals with diabetes): In the final dataset, patients with diabetes only accouted for roughly 7.98% of the sample. A larger sample could allow for better more thorough training of the model.
 
