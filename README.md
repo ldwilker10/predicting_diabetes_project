@@ -4,7 +4,7 @@
 
 
 #### Project by: Lucas Wilkerson
-#### Date: 
+#### Date: 10/28/2023
 
 ## Project Overview
 
@@ -143,6 +143,6 @@ While the model can be useful to predicting individuals with diabetes based on v
 ├── Images    
 ├── Data   
 ├── .gitignore                                                                                                                   
-├── [phase3_final_model.ipynb](add link to notebook)   
-├── [diabetes_risk_prediction.pdf](add link to pdf)       
+├── [phase3_final_project_notebook.ipynb](add link to notebook)   
+├── [diabetes_risk_prediction_slides.pdf](add link to pdf)       
 └── [README.md]( add link to readme)  
