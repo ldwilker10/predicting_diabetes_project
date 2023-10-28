@@ -1,6 +1,6 @@
 # Predicting Diabetes Risk: Phase3_Project
 
-![diabetes_cover](https://github.com/ldwilker10/phase3_final_project/blob/main/phase3_final_project_draft/images/diabetes_cover.png)
+![diabetes_cover](https://github.com/ldwilker10/phase3_final_project/blob/main/images/diabetes_cover.png)
 
 
 #### Project by: Lucas Wilkerson
@@ -45,7 +45,7 @@ Columns of dataset:
 With the cleaned dataset, there are 3260 rows and in the context of the target variable count, 3000 are labeled as not having diabetes and 260 being labeled as having diabetes. 
 
 
-![diabetes_count](https://github.com/ldwilker10/phase3_final_project/blob/main/phase3_final_project_draft/images/diabetes_count.png)
+![diabetes_count](https://github.com/ldwilker10/phase3_final_project/blob/main/images/diabetes_count.png)
 
 
 ## Modeling 
@@ -100,7 +100,7 @@ F1 Score: The model's overall score was 0.585 which takes into account both of p
 
 ### Feature Importance for Best Model
 
-![feature_importances_tuned_baseline](https://github.com/ldwilker10/phase3_final_project/blob/main/phase3_final_project_draft/images/feature_importances_tuned_baseline.png)
+![feature_importances_tuned_baseline](https://github.com/ldwilker10/phase3_final_project/blob/main/images/feature_importances_tuned_baseline.png)
 
 Most Important Features:
 
@@ -110,7 +110,7 @@ Most Important Features:
 
 When looking into the features, the most important features for this model are FFPG, Age and FPG with the most important feature being FFPG (Final Fasting Plasma Glucose). With these being the biggest predictors for the model (for identifying diabetes), these health metrics should be consistent monitored and considered by health care practitioners when reviewing health care plans.
 
-![histogram_ffpg_dm_count](https://github.com/ldwilker10/phase3_final_project/blob/main/phase3_final_project_draft/images/histogram_ffpg_dm_count.png)
+![histogram_ffpg_dm_count](https://github.com/ldwilker10/phase3_final_project/blob/main/images/histogram_ffpg_dm_count.png)
 
 
 ## Conclusion/ Recommendations 
@@ -140,9 +140,9 @@ While the model can be useful to predicting individuals with diabetes based on v
 
 ## Repository Structure
 
-├── Images    
-├── Data   
+├── data    
+├── images   
 ├── .gitignore                                                                                                                   
-├── [phase3_final_project_notebook.ipynb](add link to notebook)   
-├── [diabetes_risk_prediction_slides.pdf](add link to pdf)       
-└── [README.md]( add link to readme)  
+├── [README.md](https://github.com/ldwilker10/phase3_final_project/blob/main/README.md) 
+├── [diabetes_risk_prediction_slides.pdf](https://github.com/ldwilker10/phase3_final_project/blob/main/diabetes_risk_prediction_slides.pdf)       
+└── [phase3_final_project_notebook.ipynb](https://github.com/ldwilker10/phase3_final_project/blob/main/phase3_final_project_notebook.ipynb)  
