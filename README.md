@@ -50,45 +50,43 @@ With the cleaned dataset, there are 3260 rows and in the context of the target v
 
 ## Modeling 
 
-Baseline Model: The initial baseline model was a simple logistic regression model with no hyperparameters tuned. SMOTE was applied to initial training data to account for the class imbalance in the dataset. 
-
-- Train Score: 0.8984895601954687
-- Test Score: 0.9030674846625767
-- Cross Validation Scores: 0.86792453, 0.90344062, 0.89777778, 0.89777778, 0.90555556
-- Accuracy Score: 0.9030674846625767
-- Precision Score: 0.44715447154471544
-- F1 Score: 0.5820105820105821
-- Recall Score: 0.8333333333333334
+Baseline Logistic Regression Model: The initial baseline model was a simple logistic regression model with no hyperparameters tuned. SMOTE was applied to initial training data to account for the class imbalance in the dataset. 
 
 
 Random Forest Classifier Model: A simple random forest classifier model with no hyperparameters tuned was also utilized.
 
-- Train Score: 1.0
-- Test Score: 0.9239263803680982
-- Cross Validation Scores: 0.94339623, 0.96337403, 0.95888889, 0.96222222, 0.96555556
-- Accuracy Score: 0.9239263803680982
-- Precision Score: 0.5256410256410257
-- F1 Score: 0.5694444444444445
-- Recall Score: 0.6212121212121212
+| Metric                  | Baseline Logistic Score           | Random Forest Score               |
+|-------------------------|-----------------------------------|-----------------------------------|
+| Train Score             | 0.898                             | 1.0                               |
+| Test Score              | 0.903                             | 0.924                             |
+| Accuracy Score          | 0.903                             | 0.924                             |
+| Precision Score         | 0.447                             | 0.526                             |
+| F1 Score                | 0.582                             | 0.569                             |
+| Recall Score            | 0.833                             | 0.621                             |
+| Cross Validation Scores | 0.868, 0.903, 0.898, 0.898, 0.906 | 0.943, 0.963, 0.959, 0.962, 0.966 |
 
 
-Two other models that were tested included a simple Decision Tree Classifier Model and a simple K-Nearest Neighbors Model. These were not pursued after initial simple models due underperforming when compared to the Baseline Model and the Random Forest Classifier Model. 
+Two other models that were tested included a simple Decision Tree Classifier Model and a simple K-Nearest Neighbors Model. These were not pursued after initial simple models due underperforming when compared to the Baseline Logistic Model and the Random Forest Classifier Model. 
 
 
 ## Best Model Results 
 
-After tuning both the baseline model and random forest classifier model, and comparing all four models (baseline logistic, tuned logistic, rfc, tuned rfc), the tuned baseline logistic regression model had the best performance based our specific metrics of focus (F1 and Recall scores).
+After tuning both the baseline logistic model and random forest classifier model, and comparing all four models (baseline logistic, tuned logistic, rfc, tuned rfc), the tuned baseline logistic regression model had the best performance based our specific metrics of focus (F1 and Recall scores).
 
-With the tuned baseline model, the scores were: 
+With the Best Model (Tuned Logistic Regression Model), the scores were slightly better than the Baseline Logistic model: 
 
-- Train Score: 0.8978231896934695
-- Test Score: 0.9042944785276074
-- Cross Validation Scores: 0.86792453, 0.90566038, 0.90222222, 0.90111111, 0.90333333
-- Accuracy (same as test) Score: 0.9042944785276074
-- Precision Score: 0.45081967213114754
-- F1 Score: 0.5851063829787234
-- Recall Score: 0.8333333333333334
+| Metric                  | Baseline Logistic Score           | Tuned Logistic Score              |
+|-------------------------|-----------------------------------|-----------------------------------|
+| Train Score             | 0.898                             | 0.898                             |
+| Test Score              | 0.903                             | 0.904                             |
+| Accuracy Score          | 0.903                             | 0.904                             |
+| Precision Score         | 0.447                             | 0.451                             |
+| F1 Score                | 0.582                             | 0.585                             |
+| Recall Score            | 0.833                             | 0.833                             |
+| Cross Validation Scores | 0.868, 0.903, 0.898, 0.898, 0.906 | 0.868, 0.906, 0.902, 0.901, 0.903 |
 
+
+### Regarding the Best Model Scores:
 
 Train and test scores were very close in value indicating that there was not any signs of underfitting or overfitting with the model. While the test/accuracy score was not the best of all models, it's score of 0.904 is still adequate. Having a score of 0.904 indicates that out of all the predictions the model made, 90.3 % were correct. This includes true positives (individuals with diabetes) and true negatives(individuals without diabetes). 
 
@@ -135,8 +133,12 @@ While the model can be useful to predicting individuals with diabetes based on v
 - Low sample size (specifically individuals with diabetes): In the final dataset, patients with diabetes only accouted for roughly 7.98% of the sample. A larger sample could allow for better more thorough training of the model.
 
 - Feature information: While most features were health markers that can be deciphered based on healthy guidelines, some features did not provide additional information on how they were valued/ measured making it difficult to understand their specific relationship to diabetes risk. 
- 
 
+## Contact Information
+
+Email: ldwilker10@gmail.com
+GitHub: https://github.com/ldwilker10 
+LinkedIn: https://www.linkedin.com/in/lucasdukewilkerson/ 
 
 ## Repository Structure
 
