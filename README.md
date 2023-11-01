@@ -71,7 +71,9 @@ Two other models that were tested included a simple Decision Tree Classifier Mod
 
 ## Best Model Results 
 
-After tuning both the baseline logistic model and random forest classifier model, and comparing all four models (baseline logistic, tuned logistic, rfc, tuned rfc), the tuned baseline logistic regression model had the best performance based our specific metrics of focus (F1 and Recall scores).
+After tuning both the baseline logistic model and random forest classifier model, and comparing all four models (baseline logistic, tuned logistic, rfc, tuned rfc), the tuned logistic regression model had the best performance based our specific metrics of focus:
+
+- F1 Score and Recall score
 
 With the Best Model (Tuned Logistic Regression Model), the scores were slightly better than the Baseline Logistic model: 
 
@@ -88,7 +90,7 @@ With the Best Model (Tuned Logistic Regression Model), the scores were slightly 
 
 ### Regarding the Best Model Scores:
 
-Train and test scores were very close in value indicating that there was not any signs of underfitting or overfitting with the model. While the test/accuracy score was not the best of all models, it's score of 0.904 is still adequate. Having a score of 0.904 indicates that out of all the predictions the model made, 90.3 % were correct. This includes true positives (individuals with diabetes) and true negatives(individuals without diabetes). 
+Train and test scores were very close in value indicating that there were not any signs of underfitting or overfitting with the model. While the test/accuracy score was not the best of all models, it's score of 0.904 is still adequate. Having a score of 0.904 indicates that out of all the predictions the model made, 90.3 % were correct. This includes true positives (individuals with diabetes) and true negatives(individuals without diabetes). 
 
 Recall: The model's overall recall score was 0.833 which means that out of all of the individuals/patients that actually had diabetes, the model correctly identified 83.3 % of those. 
 
@@ -113,7 +115,7 @@ When looking into the features, the most important features for this model are F
 
 ## Conclusion/ Recommendations 
 
-The tuned baseline logistic regression model showed great performance in identifying those with diabetes based on the various features and health/lifestyles metrics. The model showed that out of all individuals with diabetes, it could correctly identify 83.3 % of those individuals. This can provide great benefit for healthcare practitioner's by increasing early detection and allowing for early treatment. By treating the disease early on, this can improve overall prognosis, improve patient outcomes by preventing acceleration of disease and negative health consequences while also decreasing the load on the healthcare system and the providers. 
+The tuned logistic regression model showed great performance in identifying those with diabetes based on the various features and health/lifestyles metrics. The model showed that out of all individuals with diabetes, it could correctly identify 83.3 % of those individuals. This can provide great benefit for healthcare practitioner's by increasing early detection and allowing for early treatment. By treating the disease early on, this can improve overall prognosis, improve patient outcomes by preventing acceleration of disease and negative health consequences while also decreasing the load on the healthcare system and the providers. 
 
 Recommendations: 
 
