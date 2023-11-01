@@ -136,9 +136,11 @@ While the model can be useful to predicting individuals with diabetes based on v
 
 ## Contact Information
 
-Email: ldwilker10@gmail.com
-GitHub: https://github.com/ldwilker10 
-LinkedIn: https://www.linkedin.com/in/lucasdukewilkerson/ 
+- Email: ldwilker10@gmail.com
+
+- GitHub: https://github.com/ldwilker10
+
+- LinkedIn: https://www.linkedin.com/in/lucasdukewilkerson/ 
 
 ## Repository Structure
 
