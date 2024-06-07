@@ -1,4 +1,4 @@
-# Predicting Diabetes Risk: Phase3_Project
+# Predicting Diabetes Risk:
 
 ![diabetes_cover](https://github.com/ldwilker10/phase3_final_project/blob/main/images/diabetes_cover.png)
 
