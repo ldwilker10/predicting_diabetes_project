@@ -90,7 +90,7 @@ With the Best Model (Tuned Logistic Regression Model), the scores were slightly 
 
 ### Regarding the Best Model Scores:
 
-Train and test scores were very close in value indicating that there were not any signs of underfitting or overfitting with the model. While the test/accuracy score was not the best of all models, it's score of 0.904 is still adequate. Having a score of 0.904 indicates that out of all the predictions the model made, 90.3 % were correct. This includes true positives (individuals with diabetes) and true negatives(individuals without diabetes). 
+Train and test scores were very close in value indicating that there were not any signs of underfitting or overfitting with the model. While the test/accuracy score was not the best of all models, it's score of 0.904 is still adequate. Having a score of 0.904 indicates that out of all the predictions the model made, 90.4 % were correct. This includes true positives (individuals with diabetes) and true negatives(individuals without diabetes). 
 
 Recall: The model's overall recall score was 0.833 which means that out of all of the individuals/patients that actually had diabetes, the model correctly identified 83.3 % of those. 
 
