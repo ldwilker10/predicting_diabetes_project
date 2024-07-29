@@ -100,7 +100,7 @@ F1 Score: The model's overall score was 0.585 which takes into account both of p
 
 ### Feature Importance for Best Model
 
-![feature_importances_tuned_baseline](https://github.com/ldwilker10/phase3_final_project/blob/main/images/feature_importances_tuned_baseline.png)
+![feature_importances_tuned_baseline](https://github.com/ldwilker10/predicting_diabetes_project/blob/main/images/ffpg_feature_importance.png)
 
 Most Important Features:
 
