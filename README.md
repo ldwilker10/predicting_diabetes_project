@@ -150,6 +150,6 @@ While the model can be useful to predicting individuals with diabetes based on v
 ├── images   
 ├── .gitignore                                                                                                                   
 ├── [README.md](https://github.com/ldwilker10/phase3_final_project/blob/main/README.md)                                          
-├── [diabetes_risk_prediction_slides.pdf](https://github.com/ldwilker10/phase3_final_project/blob/main/diabetes_risk_prediction_slides.pdf) 
-├── [final_notebook.ipynb](https://github.com/ldwilker10/predicting_diabetes_project/blob/main/final_notebook.ipynb) 
+├── [diabetes_risk_prediction_slides.pdf](https://github.com/ldwilker10/phase3_final_project/blob/main/diabetes_risk_prediction_slides.pdf)         
+├── [final_notebook.ipynb](https://github.com/ldwilker10/predicting_diabetes_project/blob/main/final_notebook.ipynb)                                
 └── [final_notebook_revised_edits1.ipynb](https://github.com/ldwilker10/predicting_diabetes_project/blob/main/final_notebook_revised_edits1.ipynb)  
